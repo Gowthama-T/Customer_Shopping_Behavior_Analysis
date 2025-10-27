@@ -57,6 +57,8 @@ Key insights derived using **PostgreSQL**:
 ---
 
 ## 📊 Power BI Dashboard
+![Uploading Screenshot (135).png…]()
+
 
 An **interactive Power BI dashboard** visualizes key insights, including:
 
