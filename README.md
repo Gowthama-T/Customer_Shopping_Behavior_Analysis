@@ -1,4 +1,5 @@
-🛍️ Customer Shopping Behavior Analysis
+1.🛍️ Customer Shopping Behavior Analysis
+
 📌 Project Overview
 
 <img width="4872" height="2656" alt="Customer Shopping Behavior Analysis" src="https://github.com/user-attachments/assets/6b4f4c8f-811f-48ac-a6be-ed489187b45f" />
