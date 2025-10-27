@@ -1,96 +1,92 @@
-1.🛍️ Customer Shopping Behavior Analysis
+# 🛍️ Customer Shopping Behavior Analysis
 
-📌 Project Overview
+## 📌 Project Overview
 
-<img width="4872" height="2656" alt="Customer Shopping Behavior Analysis" src="https://github.com/user-attachments/assets/6b4f4c8f-811f-48ac-a6be-ed489187b45f" />
+<img width="800" alt="Customer Shopping Behavior Analysis" src="https://github.com/user-attachments/assets/6b4f4c8f-811f-48ac-a6be-ed489187b45f" />
 
-This project analyzes customer shopping behavior using transactional data from 3,900 purchases across multiple product categories. The goal is to uncover insights into spending patterns, customer segments, product preferences, and subscription behavior to support data-driven business decisions.
+This project analyzes **customer shopping behavior** using transactional data from **3,900 purchases** across multiple product categories.
+The goal is to uncover insights into **spending patterns, customer segments, product preferences**, and **subscription behavior** to support data-driven business decisions.
 
-🧩 Dataset Summary
+---
 
-Rows: 3,900
+## 🧩 Dataset Summary
 
-Columns: 18
+| **Property**     | **Details**                                                              |
+| ---------------- | ------------------------------------------------------------------------ |
+| **Rows**         | 3,900                                                                    |
+| **Columns**      | 18                                                                       |
+| **Missing Data** | 37 missing values in `Review_Rating` (imputed using median per category) |
 
-Key Features:
+### 🔑 Key Features
 
-Customer demographics – Age, Gender, Location, Subscription Status
+* **Customer Demographics:** Age, Gender, Location, Subscription Status
+* **Purchase Details:** Item Purchased, Category, Purchase Amount, Season, Size, Color
+* **Shopping Behavior:** Discount Applied, Previous Purchases, Review Rating, Shipping Type
 
-Purchase details – Item Purchased, Category, Purchase Amount, Season, Size, Color
+---
 
-Shopping behavior – Discount Applied, Previous Purchases, Review Rating, Shipping Type
+## 🐍 Exploratory Data Analysis (Python)
 
-Missing Data: 37 missing values in Review_Rating column (imputed using median per category)
+**Steps Performed:**
 
-🐍 Exploratory Data Analysis (Python)
+* 🧹 **Data Loading & Cleaning:** Handled missing values and standardized column names to `snake_case`.
+* 🧠 **Feature Engineering:**
 
-Data Loading & Cleaning: Handled missing data and standardized column names to snake_case.
+  * Created `age_group` by binning customer ages.
+  * Derived `purchase_frequency_days` to track buying intervals.
+* ✅ **Data Validation:** Checked consistency between `discount_applied` and `promo_code_used`.
+* 💾 **Database Integration:** Loaded the cleaned DataFrame into **PostgreSQL** for SQL-based analysis.
 
-Feature Engineering:
+---
 
-Created age_group by binning customer ages.
+## 🧮 SQL Business Analysis
 
-Derived purchase_frequency_days to measure buying intervals.
+Key insights derived using **PostgreSQL**:
 
-Data Validation: Ensured consistency between discount and promo code features.
+1. 💰 **Revenue by Gender** – Compared total revenue by male vs. female customers.
+2. 🏷️ **High-Spending Discount Users** – Identified customers using discounts but spending above average.
+3. ⭐ **Top 5 Products by Rating** – Products with the highest average review ratings.
+4. 🚚 **Shipping Type Comparison** – Compared purchase amounts between Standard and Express shipping.
+5. 👥 **Subscribers vs. Non-Subscribers** – Compared spend and revenue differences.
+6. 💸 **Discount-Dependent Products** – Found products with the highest discounted purchase ratio.
+7. 🔁 **Customer Segmentation** – Classified into *New*, *Returning*, and *Loyal* customers.
+8. 🛒 **Top 3 Products per Category** – Listed most purchased products in each category.
+9. 📈 **Repeat Buyers & Subscriptions** – Checked correlation between >5 purchases and subscription likelihood.
+10. 🎯 **Revenue by Age Group** – Calculated total revenue contribution by each age group.
 
-Database Integration: Cleaned dataset loaded into PostgreSQL for advanced SQL queries.
+---
 
-🧮 SQL Business Analysis
+## 📊 Power BI Dashboard
 
-Key insights derived using PostgreSQL:
+An **interactive Power BI dashboard** visualizes key insights, including:
 
-Revenue comparison by gender.
+* Revenue trends by demographics and category
+* Customer segments and subscription distribution
+* Impact of discounts and shipping on spending
+* Product ratings and performance metrics
 
-Identification of high-spending discount users.
+---
 
-Top 5 products based on average review ratings.
+## 💡 Business Recommendations
 
-Comparison of average purchase amount by shipping type.
+✅ **Boost Subscriptions:** Offer exclusive benefits and personalized deals to subscribers.
+🎁 **Loyalty Programs:** Reward frequent buyers to strengthen customer retention.
+⚖️ **Optimize Discount Strategy:** Balance between sales boost and profit margins.
 
-Spend and revenue comparison between subscribers and non-subscribers.
+---
 
-Most discount-dependent products.
+## 🛠️ Tools & Technologies
 
-Customer segmentation (New, Returning, Loyal).
+| **Category**      | **Tools Used**                                 |
+| ----------------- | ---------------------------------------------- |
+| **Languages**     | Python, SQL                                    |
+| **Database**      | PostgreSQL                                     |
+| **Visualization** | Power BI                                       |
+| **Libraries**     | Pandas, NumPy, SQLAlchemy, Matplotlib, Seaborn |
 
-Top 3 products per category.
+---
 
-Correlation between repeat buyers and subscription likelihood.
+## 📈 Outcome
 
-Revenue contribution by age group.
+Delivered **actionable insights** to improve marketing strategies, enhance customer retention, and forecast revenue growth.
 
-📊 Power BI Dashboard
-
-
-An interactive Power BI dashboard visualizes:
-
-Revenue trends by demographics and product category
-
-Customer segments and subscription status
-
-Discounts and shipping impact on spending behavior
-
-Review ratings and product performance
-
-💡 Business Recommendations
-
-Boost Subscriptions: Offer exclusive benefits and personalized deals.
-
-Loyalty Programs: Reward frequent buyers to enhance retention.
-
-Discount Strategy: Optimize discounts to sustain profitability while driving engagement.
-
-🛠️ Tools & Technologies
-
-Languages: Python, SQL
-
-Database: PostgreSQL
-
-Visualization: Power BI
-
-Libraries: Pandas, NumPy, SQLAlchemy, Matplotlib, Seaborn
-
-📈 Outcome
-
-Delivered actionable insights to improve marketing strategies, customer retention, and revenue forecasting.
